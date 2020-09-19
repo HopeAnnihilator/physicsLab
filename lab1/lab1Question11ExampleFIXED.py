@@ -12,7 +12,7 @@ airAtSeaLevel = 1.225 #density of air at sea level in Kg/m^3
 gravity = 9.81 #m/s^2, acceleration of gravity
 velocityArray = [] #empty array for later
 drag = 0.5 * aerodynamicCoef * airAtSeaLevel * area #all-inclusive coeffecient?????????????????????????????????????????
-timeStep = 0.1 #interval of time
+timeStep = 0.5 #interval of time
 totalDuration = 50 #seconds
 
 #create list of all intervals of time
