@@ -3,7 +3,11 @@
 
 from matplotlib import pyplot as plt 
 import math
+import matplotlib.patches as mpatches
 
+metalName = 'Gallium'
+liquidName = 'Mercury'
+liquidTemp = '100' #in celcius
 
 densityOfSphere = 5904 #in kg/m^3, our metal is GALLIUM!?!?
 radius = 0.1 #sphere has teeny radius
@@ -56,4 +60,8 @@ plt.title("Velocity Graph")
 plt.ylabel("Vertical Speed (m/s)")
 plt.xlabel("Time (s)")
 plt.plot(timeIntervals, velocityArray)
+metal = mpatches.Patch(label= "Metal: " + metalName)
+liquid = mpatches.Patch(label= "Liquid: " + liquidName)
+temp = mpatches.Patch(label= "Liquid Temperature: " + liquidTemp + '$^\circ$C')
+plt.legend(handles=[metal, liquid, temp])
 plt.show()
